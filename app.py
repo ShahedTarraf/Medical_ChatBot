@@ -132,12 +132,11 @@ def main():
                         answer = str(llm_response)
                     answer = f"ملاحظة: هذه المعلومات من المعرفة العامة. {answer}"
 
-                # عرض الإجابة
                 st.chat_message("assistant").markdown(answer)
                 st.session_state.messages.append({"role": "assistant", "content": answer})
 
             except Exception as e:
-                st.error(f"❌ خطأ: {str(e)}")
+                st.error(f" خطأ: {str(e)}")
 
 if __name__ == "__main__":
     main()
